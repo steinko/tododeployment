@@ -1,0 +1,6 @@
+/bin/
+/node_modules/
+/policy
+/.project
+/.settings/
+/package-lock.json

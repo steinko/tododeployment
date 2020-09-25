@@ -1,0 +1,17 @@
+{
+    "name": "gke-hello-world",
+    "script": {
+        "test": "jest"
+    },
+    "devDependencies": {
+        "@types/node": "^10.0.0",
+        "jest": "^26.4.2"
+    },
+    "dependencies": {
+        "@pulumi/docker": "^2.3.0",
+        "@pulumi/gcp": "^3.24.0",
+        "@pulumi/kubernetes": "^2.6.1",
+        "@pulumi/pulumi": "^2.10.1",
+        "@pulumi/random": "^2.3.1"
+    }
+}
