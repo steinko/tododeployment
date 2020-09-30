@@ -9,11 +9,15 @@ const name = "todo-cluster";
 const engineVersion = gcp.container.getEngineVersions({location:config.cloudRegion, project: config.cloudProject}).then(v => v.latestMasterVersion);
 const cluster = new gcp.container.Cluster(name, {
 	project: config.cloudProject,
-    initialNodeCount: 2,
+	clusterAutoscaling: {enabled: true, resourceLimits:[ {resourceType: 'cpu', minimum:1 ,maximum:20 },
+	                                                     {resourceType: 'memory', minimum:1 ,maximum:64 }  
+                                                       ]
+                        },
+    initialNodeCount: 1,
     minMasterVersion: engineVersion,
     nodeVersion: engineVersion,
     nodeConfig: {
-        machineType: "n1-standard-1",
+        machineType: "e2-medium",
         oauthScopes: [
             "https://www.googleapis.com/auth/compute",
             "https://www.googleapis.com/auth/devstorage.read_only",

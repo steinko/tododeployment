@@ -8,6 +8,7 @@
         "jest": "^26.4.2"
     },
     "dependencies": {
+        "@pulumi/aiven": "^3.1.4",
         "@pulumi/docker": "^2.3.0",
         "@pulumi/gcp": "^3.24.0",
         "@pulumi/kubernetes": "^2.6.1",
