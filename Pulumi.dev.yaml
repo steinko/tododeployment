@@ -1,0 +1,10 @@
+config:
+  gke-hello-world:cloudLocation: europe-north1-a
+  gke-hello-world:cloudProject: springboot22
+  gke-hello-world:cloudRegion: europe-north1
+  gke-hello-world:dbPassword:
+    secure: AAABAFzZEoVz36jggAnqo7Rp8yWavrvyCCQs3vzohk0p6pFy
+  gke-hello-world:dbUserName: postgres
+  gke-hello-world:dockerPassword:
+    secure: AAABALSCTC34gRpceF8Op9XjtqQitoSRgskZ1e0AwijcJeF5mi1RnsQZiA==
+  gke-hello-world:dockerUserName: steinko
