@@ -3,9 +3,13 @@ config:
   gke-hello-world:cloudProject: springboot22
   gke-hello-world:cloudRegion: europe-north1
   gke-hello-world:dbPassword:
-    secure: AAABADSVnsoo3eFuvqqbiJS9qK4RJHaIYtVmMu98XlJKbnAW
-  gke-hello-world:dbUserName: todoUser
+    secure: AAABAO97jiiaBU8S9reL9WF+IwwX573sOYsXcTstCgR1pr/3
+  gke-hello-world:dbUserName: postgres
+  gke-hello-world:dbUserPassword:
+    secure: AAABAK696BAAH40v0o+KjVxEJk2D0Fq2MOIODWe2mUFcHo+k
+  gke-hello-world:dockePasswoed:
+    secure: AAABAD2+iZYr8iQuHKAh93TDdeKpxzUVjcJMXQX4oWm05d1VaxIhTtDw2Q==
+  gke-hello-world:dockeUserName: steinko
   gke-hello-world:dockerPassword:
-    secure: AAABAOreR7R9N+fB7wdP/IK15mfCIp43wELGEPtb/zAEivGGl7kQu+KByw==
-  gke-hello-world:dockerUserName: steinko
-  gke-hello-world:project: springboot22
+    secure: AAABAGmw7UoHMCyne3XIfLNWvCfviU3q4pTuGEZJEFkwtgcUL0NjXY2s7g==
+  gke-hello-world:dockerUserName: steinKo

@@ -72,3 +72,4 @@ users:
 export const clusterProvider = new k8s.Provider(name, {
     kubeconfig: kubeconfig,
 });
+

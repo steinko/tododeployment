@@ -1,18 +1,20 @@
 import * as k8s from "@pulumi/kubernetes";
 import {clusterProvider } from './cluster'
 
-export const backendPod = new k8s.core.v1.Pod('todo-backend-pod', {
+
+
+export const frontendPod = new k8s.core.v1.Pod('todo-frontend-pod', {
 	                metadata:{
-                        name: "todo-backend-pod",
+                        name: "todo-fronetend-pod",
                         labels: {
                            app: "todo",
-                           tier: "backend",
+                           tier: "frontend",
                          }, 
                       },
                     spec:   {
 	                      
-                          containers: [{  name: "todo-backend-container",
-                                          image: 'docker.io/steinko/todobackend'
+                          containers: [{  name: "todo-frontend-container",
+                                          image: 'docker.io/steinko/todofrontend'
                                      }]
                              
                         }

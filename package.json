@@ -8,6 +8,7 @@
         "jest": "^26.4.2"
     },
     "dependencies": {
+        "@elastic/apm-rum-react": "^1.2.5",
         "@pulumi/aiven": "^3.1.4",
         "@pulumi/docker": "^2.3.0",
         "@pulumi/gcp": "^3.24.0",

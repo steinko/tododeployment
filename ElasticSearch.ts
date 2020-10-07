@@ -4,6 +4,7 @@ import {clusterProvider } from './cluster'
 
 const version = "7.9.2"
 
+
 export const elasticSearch = new k8s.helm.v2.Chart("elasticsearch", {
     repo: "elastic",
     version:version,
