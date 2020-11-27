@@ -7,7 +7,7 @@ npm run build
 # Preview changes that would be made if the PR were merged.
 case ${TRAVIS_BRANCH} in
     master)
-        pulumi stack select acme/website-staging
+        pulumi stack select dev
         pulumi preview
         ;;
     production)

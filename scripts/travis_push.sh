@@ -7,7 +7,7 @@ npm run build
 # Update the stack
 case ${TRAVIS_BRANCH} in
     master)
-        pulumi stack select acme/website-staging
+        pulumi stack select dev
         pulumi up --yes
         ;;
     production)
