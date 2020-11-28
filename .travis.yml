@@ -1,5 +1,7 @@
-language: node
+language: node_js
+node_js: node
 before_install:
+  - npm i -g npm
   - curl -fsSL https://get.pulumi.com/ | sh
   - export PATH=$PATH:$HOME/.pulumi/bin
 script:
