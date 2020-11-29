@@ -1,8 +1,7 @@
 language: node_js
 node_js: node
 before_install:
-- openssl aes-256-cbc -K $encrypted_fe4a1dcd22d5_key -iv $encrypted_fe4a1dcd22d5_iv
-  -in springboot22-102ebb3d55b7.json.enc -out springboot22-102ebb3d55b7.json -d
+- openssl aes-256-cbc -K $encrypted_fe4a1dcd22d5_key -iv $encrypted_fe4a1dcd22d5_iv -in springboot22-102ebb3d55b7.json.enc -out springboot22-102ebb3d55b7.json -d
 - npm i -g npm
 - curl -fsSL https://get.pulumi.com/ | sh
 - export PATH=$PATH:$HOME/.pulumi/bin
