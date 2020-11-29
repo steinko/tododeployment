@@ -1,27 +1,20 @@
 language: node_js
 node_js: node
 before_install:
-- openssl aes-256-cbc -K $encrypted_c0b47446d22b_key -iv $encrypted_c0b47446d22b_iv -in springboot22-35b0603da5d4.json.enc -out springboot22-35b0603da5d4.json -d
-- npm i -g npm
-- curl -fsSL https://get.pulumi.com/ | sh
-- export PATH=$PATH:$HOME/.pulumi/bin
-- deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt
-  cloud-sdk main | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-- curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring
-  /usr/share/keyrings/cloud.google.gpg add -
-- sudo apt-get update && sudo apt-get install google-cloud-sdk
-- gcloud auth activate-service-account --key-file=springboot22-35b0603da5d4.json
-- gcloud config set accessibility/screen_reader True
-- gcloud config set compute/region europe-north1
-- gcloud config set compute/zone europe-north1-a
-- gcloud config set core/disable_usage_reporting False
-- gcloud config set core/project springboot22
-
+  - openssl aes-256-cbc -K $encrypted_c0b47446d22b_key -iv $encrypted_c0b47446d22b_iv -in springboot22-35b0603da5d4.json.enc -out springboot22-35b0603da5d4.json -d
+  - npm i -g npm
+  - curl -fsSL https://get.pulumi.com/ | sh
+  - export PATH=$PATH:$HOME/.pulumi/bin
+  - deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+  - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
+  - sudo apt-get update && sudo apt-get install google-cloud-sdk
+  - gcloud auth activate-service-account --key-file=springboot22-35b0603da5d4.json
+  - gcloud config set accessibility/screen_reader True
+  - gcloud config set compute/region europe-north1
+  - gcloud config set compute/zone europe-north1-a
+  - gcloud config set core/disable_usage_reporting False
+  - gcloud config set core/project springboot22
 script:
-- npm install
-- pulumi stack select dev
-- pulumi up --yes
-env:
-  global:
-  - secure: sIg7O8PuRMXYp+3osbAhtEmDUtNeLRqvAziwSQqL0BUiYlCOb+i7x3W5KDHxmWnvrREYmO27SFCqbwojvuptOiBrP/4jbbj4kN8orbZtZOsHaUME0KbTbOZA+81nhwaVT3Gj2l+9HA4zDeeP1HBFfOHKOYeVcwQSmZCXHww4wRz/WE9uYAKt9Cfzx59PLfiA0tPdrPbpAapxlOs7AoTyiCP1ycalSedOtGPqvPVoGS05YFo1oSbNZiThscvoIpxp2LZ5gPO3ydQf7OXubU7cbhhLuGQnr1HYAh/eQjOsGFLkAMXSSYWls2Utzp0BrNOR8YLppxbjkwpHW2FsS8jK7vquAggbPCUVc+gCdqg+038heUSXeGCgdIRbzBrpDSBydaeg8AfM1J2//A7jitfZFeqy1Le3auHSNFd8O9iLfGczf6DY4F0NVXv+hXnl/P5CJ/Itz5tW2NZT7Q0XTW6i3/iwlX4GQrJV/A7BDgyOhYKi5xR1ZT5w/eyMlvSOoT5qn/I8t70up7hO/zXojTdQnVb0+NQxZdPiyqi5rnR4Hk6RPDGWA4KPWvka2jJ4Qma6i1I3tND4A/0wS/vrCpqcrLj4YEr63kqdh29oIoEnLCC8RINLAhNv4go9cc2luuIJq2+xY38xx4sb0zubWT4B8GbQDqnxhsgjcNyRmaPEsi4=
-  - secure: VODqIw8WS1OzVSpaS4MEpXcp3LzqEXGVcj5H2j+US27NC3SIhSqdFNTTXirsAY7uqZzbN0toSBiTSM64oo0YVVnsOACKTlV7JXEdEWqfhuNCas2bAi+5v3KcZAG8jkGASAa8fJL2tGIat8k5ogF1dR6T+NPEFqg2zOZtXjhG9Hralqxnq+uJ8tqpgip1DkXOBdM+wQvG8bFeIf3WubG7OL/joWmCNhwMGo25p0zR5xmwLu4mVKI1P7VFeY0DUB77BJ5IHcL6g2BFtHnanxDiV4Df6nvYomIudoVTbuglU5aM3+5kK9+H3D0M50LjhjIGUP1kay/CgxJOpfi6FI7KxT+T8uNH/PJD/2Bk2G9AZcOE8LdT1JfS7Jr1f/U5lGPUAmwzkmYLKLbJCHTqMui1K3PjIU9eXzVihmCz4quVYLeNYIbRuS37lQ8X/zlTopHCT2STPXDZHNTNh11K+reKAaqMpIwxK2Ef3sr6wKxlzDU3DIGUlzQLYo9KZXpsEJsdUPeZg7wYWcMBxLzxfntKfnQf2yHR1I71780JMRpmvqFF34V5GU2364fw8cXoNqPaCj1fwRIN61tXV1aok2unVgZeFg1m/DPGadmlMrne3GyQeXPwm0vD5hsiIGUB1mqkTiXcqzz4WaXeIHtiF4kF1HyZXB9470HhobRtGU2AImE=
+  - npm install
+  - pulumi stack select dev
+  - pulumi up --yes
