@@ -1,20 +1,23 @@
 language: node_js
 node_js: node
 before_install:
-  - openssl aes-256-cbc -K $encrypted_c0b47446d22b_key -iv $encrypted_c0b47446d22b_iv -in springboot22-35b0603da5d4.json.enc -out springboot22-35b0603da5d4.json -d
-  - npm i -g npm
-  - curl -fsSL https://get.pulumi.com/ | sh
-  - export PATH=$PATH:$HOME/.pulumi/bin
-  - deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt cloud-sdk main | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
-  - curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring /usr/share/keyrings/cloud.google.gpg add -
-  - sudo apt-get update && sudo apt-get install google-cloud-sdk
-  - gcloud auth activate-service-account --key-file=springboot22-35b0603da5d4.json
-  - gcloud config set accessibility/screen_reader True
-  - gcloud config set compute/region europe-north1
-  - gcloud config set compute/zone europe-north1-a
-  - gcloud config set core/disable_usage_reporting False
-  - gcloud config set core/project springboot22
+- openssl aes-256-cbc -K $encrypted_fe4a1dcd22d5_key -iv $encrypted_fe4a1dcd22d5_iv
+  -in springboot22-102ebb3d55b7.json.enc -out springboot22-102ebb3d55b7.json -d
+- npm i -g npm
+- curl -fsSL https://get.pulumi.com/ | sh
+- export PATH=$PATH:$HOME/.pulumi/bin
+- deb [signed-by=/usr/share/keyrings/cloud.google.gpg] https://packages.cloud.google.com/apt
+  cloud-sdk main | sudo tee -a /etc/apt/sources.list.d/google-cloud-sdk.list
+- curl https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key --keyring
+  /usr/share/keyrings/cloud.google.gpg add -
+- sudo apt-get update && sudo apt-get install google-cloud-sdk
+- gcloud auth activate-service-account --key-file=springboot22-35b0603da5d4.json
+- gcloud config set accessibility/screen_reader True
+- gcloud config set compute/region europe-north1
+- gcloud config set compute/zone europe-north1-a
+- gcloud config set core/disable_usage_reporting False
+- gcloud config set core/project springboot22
 script:
-  - npm install
-  - pulumi stack select dev
-  - pulumi up --yes
+- npm install
+- pulumi stack select dev
+- pulumi up --yes
