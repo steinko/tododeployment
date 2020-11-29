@@ -6,7 +6,7 @@ export const backendPod = new k8s.core.v1.Pod('todo-backend-pod', {
                         name: "todo-backend-pod",
                         labels: {
                            app: "todo",
-                           tier: "backend",
+                           tire: "backend",
                          }, 
                       },
                     spec:   {

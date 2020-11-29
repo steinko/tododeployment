@@ -8,7 +8,7 @@ export const frontendPod = new k8s.core.v1.Pod('todo-frontend-pod', {
                         name: "todo-fronetend-pod",
                         labels: {
                            app: "todo",
-                           tier: "frontend",
+                           tire: "frontend",
                          }, 
                       },
                     spec:   {
